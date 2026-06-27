@@ -9,6 +9,7 @@ print(df["numero"].dtype)
 df["numero"] = df["numero"].str.replace(" Fires", "", regex=False)
 df["numero"] = df["numero"].str.replace(".", "", regex=False)
 df["numero"] = pd.to_numeric(df["numero"], errors='coerce')
+print(df["numero"].isnull().sum())
 print(df["numero"].dtype)
 
 print(df.groupby("estado")["numero"].mean())
