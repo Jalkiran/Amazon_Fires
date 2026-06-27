@@ -12,3 +12,6 @@ print(df.groupby("estado")["numero"].mean())
 
 #Cleaning the data
 print(df.isnull().sum())
+
+df_dropped = df.dropna()
+print(len(df_dropped))
