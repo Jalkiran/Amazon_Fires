@@ -27,3 +27,6 @@ print(df["estado"].unique())
 #Finding the total fires of every state
 state_totals = df.groupby("estado")["numero"].sum()
 print(state_totals)
+
+#State with max fires
+print(state_totals.idxmax())
