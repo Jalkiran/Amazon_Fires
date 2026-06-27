@@ -9,3 +9,6 @@ df["numero"] = pd.to_numeric(df["numero"], errors='coerce')
 print(df["numero"].dtype)
 
 print(df.groupby("estado")["numero"].mean())
+
+#Cleaning the data
+print(df.isnull().sum())
