@@ -19,3 +19,7 @@ print(df.isnull().sum())
 
 df_dropped = df.dropna()
 print(len(df_dropped))
+
+#Maintaining Data Consistency
+df["estado"] = df["estado"].str.title()
+print(df["estado"].unique())
